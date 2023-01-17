@@ -1,0 +1,291 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*cores pokemon*/
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee5630;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+/*cores pokemon*/
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pokemon .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .name {
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: .25rem;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    text-transform: capitalize;
+    color: white;
+    background-color: rgba(228, 228, 228, 0.247);
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: white;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #979797a9;
+    z-index: 5;
+}
+
+.card {
+    display: flex;
+    margin: .5rem;
+    height: 100vh;
+    width: 90vw;
+    flex-direction: column;
+    column-width: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.card-header {
+    display: flex;
+    height: 80vh;
+    width: 90vw;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.card-header button {
+    position: relative;
+    font-size: larger;
+    text-align: left;
+    top: 0;
+    color: white;
+    background-color: #ffffff00;
+    border: none;
+}
+
+.card-header img {
+    position: relative;
+    top: 40px;
+    max-width: 100%;
+    height: 200px;
+}
+
+.card-header .name {
+    text-transform: capitalize;
+    color: white;
+    font-size: x-large;
+    margin: 8px;
+
+}
+
+.card-header .number {
+    position: relative;
+    font-size: x-large;
+    color: white;
+    text-align: right;
+    font-size: .625rem;
+    top: 40px;
+}
+
+.card-header .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 10px;
+
+}
+
+.card-header .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card-header .detail .types .type {
+    text-transform: capitalize;
+    color: white;
+    background-color: rgba(228, 228, 228, 0.247);
+    padding: .25rem .5rem;
+    margin: 3px;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.car-body {
+    display: flex;
+    height: 100vh;
+    width: 90vw;
+    background-color: #ffffff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+    border-radius: 1rem;
+}
+
+.car-body .info {
+    margin: 10px;
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .card {
+        width: 40vw;
+    }
+    .card-header {
+        width: 40vw;
+    }
+    .car-body{
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+}
